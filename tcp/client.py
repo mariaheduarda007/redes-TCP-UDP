@@ -4,7 +4,7 @@ import socket
 def init_server(host: str, port: int):
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-    message = input("Type your message baby:")
+    message = input("Type your message:")
     client_socket.connect((host, port))
     client_socket.sendall(message.encode('utf-8'))
     client_socket.close()
