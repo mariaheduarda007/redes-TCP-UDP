@@ -5,11 +5,11 @@ def send_message(host: str, port: int, message: str):
 
     server_socket.sendto(message, (host, port))
 
-    if __name__=='__main__':
-        HOST = 'localhost'
-        PORT = 9000
+    while True:
+        message = input('Mensagem: ').encode('utf-8')
+        send_message(HOST, PORT, message)
 
 
-while True:
-    message = input('Mensagem: ').encode('utf-8')
-    send_message(HOST, PORT, message)
+if __name__=='__main__':
+    HOST = 'localhost'
+    PORT = 9000
