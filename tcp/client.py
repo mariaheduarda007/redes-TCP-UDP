@@ -5,6 +5,10 @@ def send_message(host: str, port: int):
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     message = input("Mensagem:")
 
+<<<<<<< HEAD
+=======
+    message = input("Type your message:")
+>>>>>>> 9572bff0478756b0b61efcc2a37a5688bc512f0d
     client_socket.connect((host, port))
     client_socket.sendall(message.encode('utf-8'))
     client_socket.close()
