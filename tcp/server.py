@@ -6,7 +6,6 @@ def init_server(host: str, port: int):
     server_socket.listen(1)
 
     client_socket, address = server_socket.accept()
-
     data = client_socket.recv(1024)
     message = data.decode('utf-8')
     print(message)
@@ -16,6 +15,6 @@ def init_server(host: str, port: int):
 
 if __name__=='__main__':
     HOST = 'localhost'
-    PORT = 8000
+    PORT = 9000
 
 init_server(HOST, PORT)
